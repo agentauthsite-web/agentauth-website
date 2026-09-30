@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import DemoAnimation from './DemoAnimation';
+import emailjs from '@emailjs/browser';
 
 // Animated Shield Logo
 function ShieldLogo({ size = 80 }) {
@@ -110,7 +111,6 @@ function AgentMonitor() {
 }
 
 export default function App() {
-  const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
   const canvasRef = useRef(null);
@@ -171,9 +171,25 @@ export default function App() {
     return () => clearInterval(t);
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (email) setSubmitted(true);
+    const email = e.target.email.value;
+    try {
+      await emailjs.send(
+        'service_gmys5yb',
+        'template_cq4eou9',
+        { email: email, to_email: email },
+        'pRYcZuFaF5o_j_B4y'
+      );
+      await fetch('https://formspree.io/f/mzezwebn', {
+        method: 'POST',
+        body: JSON.stringify({ email }),
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
+      });
+    } catch (err) {
+      console.log('Submit error:', err);
+    }
+    setSubmitted(true);
   };
 
   return (
@@ -445,7 +461,8 @@ export default function App() {
             </p>
             {!submitted ? (
               <form onSubmit={handleSubmit} style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <input type="email" placeholder="your@company.com" value={email} onChange={e => setEmail(e.target.value)} required className="waitlist-input" />
+                <input type="email" name="email" placeholder="your@company.com" required className="waitlist-input" />
+                <input type="hidden" name="_subject" value="New AgentAuth Waitlist Signup!" />
                 <button type="submit" className="btn-primary">Get Early Access →</button>
               </form>
             ) : (
