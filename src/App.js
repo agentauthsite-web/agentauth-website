@@ -2,30 +2,11 @@ import emailjs from '@emailjs/browser';
 import { useEffect, useRef, useState } from 'react';
 import DemoAnimation from './DemoAnimation';
 
-// Animated Shield Logo
+// Fingerprint Logo
 function ShieldLogo({ size = 80 }) {
   return (
-    <div style={{ position: 'relative', width: size, height: size, margin: '0 auto 32px' }}>
-      <svg width={size} height={size} viewBox="0 0 80 80" fill="none">
-        <defs>
-          <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#6366f1" />
-            <stop offset="100%" stopColor="#8b5cf6" />
-          </linearGradient>
-          
-        </defs>
-        <path d="M40 4L8 16v24c0 18 14 32 32 36 18-4 32-18 32-36V16L40 4z"
-          fill="url(#shieldGrad)" opacity="0.15"/>
-        <path d="M40 4L8 16v24c0 18 14 32 32 36 18-4 32-18 32-36V16L40 4z"
-          stroke="url(#shieldGrad)" strokeWidth="2" fill="none"/>
-        <path d="M28 40l8 8 16-16" stroke="#a78bfa" strokeWidth="3"
-          strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-      <div style={{
-        position: 'absolute', inset: -8, borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(99,102,241,0.2) 0%, transparent 70%)',
-        animation: 'pulse 3s ease infinite'
-      }}/>
+    <div style={{ margin: '0 auto 32px', width: size, height: size }}>
+      <img src="/logo.svg" alt="AgentAuth" style={{ width: size, height: size, objectFit: 'contain' }} />
     </div>
   );
 }
@@ -252,10 +233,6 @@ export default function App() {
         {/* Navbar */}
         <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 60px', borderBottom: '1px solid rgba(255,255,255,0.04)', backdropFilter: 'blur(30px)', position: 'sticky', top: 0, zIndex: 100, background: 'rgba(8,8,16,0.85)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <svg width="28" height="28" viewBox="0 0 80 80" fill="none">
-              <path d="M40 4L8 16v24c0 18 14 32 32 36 18-4 32-18 32-36V16L40 4z" fill="rgba(99,102,241,0.2)" stroke="#6366f1" strokeWidth="2"/>
-              <path d="M28 40l8 8 16-16" stroke="#a78bfa" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
             <div style={{ fontSize: '22px', fontWeight: '900', letterSpacing: '-1px' }}>
               Agent<span className="hero-gradient-text">Auth</span>
             </div>
@@ -480,10 +457,6 @@ export default function App() {
         {/* Footer */}
         <footer style={{ padding: '48px 60px', borderTop: '1px solid rgba(255,255,255,0.04)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <svg width="24" height="24" viewBox="0 0 80 80" fill="none">
-              <path d="M40 4L8 16v24c0 18 14 32 32 36 18-4 32-18 32-36V16L40 4z" fill="rgba(99,102,241,0.2)" stroke="#6366f1" strokeWidth="2"/>
-              <path d="M28 40l8 8 16-16" stroke="#a78bfa" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
             <div style={{ fontSize: '20px', fontWeight: '900', letterSpacing: '-1px' }}>
               Agent<span className="hero-gradient-text">Auth</span>
             </div>
