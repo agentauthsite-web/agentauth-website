@@ -254,9 +254,6 @@ export default function App() {
             <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#10b981', display: 'inline-block', boxShadow: '0 0 8px #10b981' }} />
             Now in private beta — limited spots available
           </div>
-          <div className="hero-text floating">
-            <ShieldLogo size={100} />
-          </div>
           <h1 className="hero-text" style={{ fontSize: '80px', fontWeight: '900', lineHeight: '1.05', letterSpacing: '-3px', marginBottom: '32px' }}>
             <span style={{ color: '#ffffff' }}>Identity &amp;<br />Authentication</span>
             <br />
@@ -461,8 +458,13 @@ export default function App() {
               Agent<span className="hero-gradient-text">Auth</span>
             </div>
           </div>
-          <div style={{ color: '#444', fontSize: '13px' }}>© 2026 AgentAuth · Identity for AI Agents · Built in the UK 🇬🇧</div>
-          <div style={{ color: '#444', fontSize: '13px' }}>agentauth.site</div>
+          <div style={{ color: '#666', fontSize: '13px' }}>© 2026 AgentAuth · Identity for AI Agents · Built in the UK 🇬🇧</div>
+          <div style={{ fontSize: '13px' }}>
+            <span style={{ color: '#666' }}>Built by </span>
+            <a href="https://www.linkedin.com/in/manohar-reddy-yandapalli-5998b3212/" target="_blank" rel="noreferrer" style={{ color: '#6366f1', textDecoration: 'none', fontWeight: '600' }}>
+              Manohar Reddy — ForgeRock Certified IAM Engineer
+            </a>
+          </div>
         </footer>
 
       </div>
