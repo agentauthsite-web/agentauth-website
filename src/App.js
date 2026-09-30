@@ -2,15 +2,6 @@ import emailjs from '@emailjs/browser';
 import { useEffect, useRef, useState } from 'react';
 import DemoAnimation from './DemoAnimation';
 
-// Fingerprint Logo
-function ShieldLogo({ size = 80 }) {
-  return (
-    <div style={{ margin: '0 auto 32px', width: size, height: size }}>
-      <img src="/logo.svg" alt="AgentAuth" style={{ width: size, height: size, objectFit: 'contain' }} />
-    </div>
-  );
-}
-
 // Live Agent Monitor
 function AgentMonitor() {
   const [scores, setScores] = useState([94, 87, 62, 31]);
