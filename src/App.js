@@ -1,6 +1,6 @@
-import { useEffect, useState, useRef } from 'react';
-import DemoAnimation from './DemoAnimation';
 import emailjs from '@emailjs/browser';
+import { useEffect, useRef, useState } from 'react';
+import DemoAnimation from './DemoAnimation';
 
 // Animated Shield Logo
 function ShieldLogo({ size = 80 }) {
@@ -12,6 +12,7 @@ function ShieldLogo({ size = 80 }) {
             <stop offset="0%" stopColor="#6366f1" />
             <stop offset="100%" stopColor="#8b5cf6" />
           </linearGradient>
+          
         </defs>
         <path d="M40 4L8 16v24c0 18 14 32 32 36 18-4 32-18 32-36V16L40 4z"
           fill="url(#shieldGrad)" opacity="0.15"/>
