@@ -25,7 +25,6 @@ function AgentMonitor({ isDark }) {
 
   const getColor = (s) => s > 80 ? '#10b981' : s > 50 ? '#f59e0b' : '#ef4444';
   const getStatusColor = (s) => ({ active: '#10b981', warning: '#f59e0b', danger: '#ef4444' }[s]);
-  const glassAlpha = isDark ? '0.08' : '0.6';
   const textColor = isDark ? '#e2e8f0' : '#0f0f1a';
   const mutedColor = isDark ? '#666' : '#888';
 
@@ -97,7 +96,7 @@ export default function App() {
     text: isDark ? '#ffffff' : '#0a0a1a',
     subtext: isDark ? '#aaa' : '#44446a',
     muted: isDark ? '#666' : '#7777aa',
-    glassAlpha: isDark ? '0.07' : '0.55',
+    glassAlpha: isDark ? '0.07' : '0.55', // used in CSS vars
     glassBorder: isDark ? 'rgba(255,255,255,0.12)' : 'rgba(255,255,255,0.85)',
     glassShine: isDark ? '0.08' : '0.45',
     navBg: isDark ? 'rgba(8,8,16,0.7)' : 'rgba(240,241,255,0.7)',
@@ -169,28 +168,7 @@ export default function App() {
     setSubmitted(true);
   };
 
-  // Glass styles
-  const glass = (extra = {}) => ({
-    background: `rgba(255,255,255,${colors.glassAlpha})`,
-    backdropFilter: 'blur(40px) saturate(180%)',
-    WebkitBackdropFilter: 'blur(40px) saturate(180%)',
-    border: `1px solid ${colors.glassBorder}`,
-    boxShadow: `0 8px 32px ${colors.shadow}, inset 0 1px 0 rgba(255,255,255,${colors.glassShine})`,
-    borderRadius: '20px',
-    position: 'relative',
-    overflow: 'hidden',
-    ...extra
-  });
 
-  const glassShine = {
-    content: "''",
-    position: 'absolute',
-    top: 0, left: 0, right: 0,
-    height: '50%',
-    background: `linear-gradient(180deg, rgba(255,255,255,${colors.glassShine}) 0%, transparent 100%)`,
-    borderRadius: '20px 20px 0 0',
-    pointerEvents: 'none'
-  };
 
   return (
     <div style={{ backgroundColor: colors.bg, minHeight: '100vh', fontFamily: "'Inter', -apple-system, sans-serif", color: colors.text, overflowX: 'hidden', transition: 'all 0.5s' }}>
