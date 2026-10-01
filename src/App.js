@@ -1,5 +1,4 @@
-import emailjs from '@emailjs/browser';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import DemoAnimation from './DemoAnimation';
 
 function AgentMonitor({ isDark }) {
@@ -85,7 +84,6 @@ function AgentMonitor({ isDark }) {
 }
 
 export default function App() {
-  const [submitted, setSubmitted] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
   const [theme, setTheme] = useState('dark');
   const canvasRef = useRef(null);
@@ -157,16 +155,6 @@ export default function App() {
     const t = setInterval(() => setActiveFeature(p => (p + 1) % 6), 2000);
     return () => clearInterval(t);
   }, []);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const email = e.target.email.value;
-    try {
-      await emailjs.send('service_gmys5yb', 'template_cq4eou9', { email, to_email: email }, 'pRYcZuFaF5o_j_B4y');
-      await fetch('https://formspree.io/f/mzezwebn', { method: 'POST', body: JSON.stringify({ email }), headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' } });
-    } catch (err) { console.log(err); }
-    setSubmitted(true);
-  };
 
 
 
