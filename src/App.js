@@ -401,8 +401,8 @@ export default function App() {
             <button className="theme-btn" onClick={() => setTheme(isDark ? 'light' : 'dark')}>
               {isDark ? '☀️' : '🌙'} {isDark ? 'Light' : 'Dark'}
             </button>
-            <a href="#waitlist" className="btn-primary" style={{ padding: '10px 24px', fontSize: '14px', borderRadius: '50px' }}>
-              Get Early Access →
+            <a href="https://app.agentauth.site" className="btn-primary" style={{ padding: '10px 24px', fontSize: '14px', borderRadius: '50px' }}>
+              Get Started →
             </a>
           </div>
         </nav>
@@ -425,7 +425,7 @@ export default function App() {
           </p>
 
           <div className="hero-btns" style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '60px' }}>
-            <a href="#waitlist" className="btn-primary">Join the Waitlist →</a>
+            <a href="https://app.agentauth.site" className="btn-primary">Get Started Free →</a>
             <a href="#demo" className="glass-btn" style={{ color: colors.text }}>See Live Demo</a>
           </div>
 
@@ -585,22 +585,12 @@ export default function App() {
               <span className="gradient-text">before it's too late</span>
             </h2>
             <p style={{ color: colors.subtext, marginBottom: '56px', fontSize: '18px', maxWidth: '440px', margin: '0 auto 56px', lineHeight: '1.7' }}>
-              Join the waitlist and get early access to AgentAuth.
+              One platform to monitor, secure and authenticate ALL your AI agents.
             </p>
-            {!submitted ? (
-              <form onSubmit={handleSubmit} style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <input type="email" name="email" placeholder="your@company.com" required className="waitlist-input" style={{ color: colors.text }} />
-                <input type="hidden" name="_subject" value="New AgentAuth Waitlist Signup!" />
-                <button type="submit" className="btn-primary">Get Early Access →</button>
-              </form>
-            ) : (
-              <div className="glass-card" style={{ padding: '40px 60px', display: 'inline-block', borderRadius: '24px' }}>
-                <div style={{ fontSize: '40px', marginBottom: '16px' }}>🎉</div>
-                <div style={{ fontSize: '22px', fontWeight: '800', marginBottom: '8px', color: colors.text }}>You're on the list!</div>
-                <div style={{ color: colors.subtext, fontSize: '15px' }}>We'll reach out when AgentAuth launches.</div>
-              </div>
-            )}
-            <p style={{ marginTop: '28px', color: colors.muted, fontSize: '13px' }}>No spam. No credit card required. Just early access.</p>
+            <a href="https://app.agentauth.site" className="btn-primary" style={{ fontSize: '18px', padding: '18px 48px', borderRadius: '50px', textDecoration: 'none' }}>
+              Get Started Free →
+            </a>
+            <p style={{ marginTop: '28px', color: colors.muted, fontSize: '13px' }}>No credit card required. Free to start.</p>
           </div>
         </div>
 
