@@ -518,12 +518,12 @@ export default function App() {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
             {[
-              { icon: '📊', title: 'Universal Dashboard', desc: 'See ALL your AI agents in one place — Google, Microsoft, OpenAI, LangChain, CrewAI or any platform. One view for everything.', color: '#6366f1' },
+              { icon: '📊', title: 'Universal Dashboard', desc: 'See ALL your AI agents in one place regardless of which platform they run on. One unified view for everything.', color: '#6366f1' },
               { icon: '🛡️', title: 'MFA for Agents', desc: 'Protect your agents with fingerprint, push notification or OTP. No attacker can access your agent even if they steal the credentials.', color: '#8b5cf6' },
               { icon: '📡', title: 'Live TrustScore', desc: 'Every agent gets a real-time TrustScore from 0-100. Watch it update live as your agent works. Drop below threshold = auto-lock.', color: '#f59e0b' },
               { icon: '🚨', title: 'Auto-lock & Alerts', desc: 'AgentAuth detects suspicious behaviour and auto-locks the agent instantly. You get an email and phone alert the moment it happens.', color: '#ef4444' },
               { icon: '📋', title: 'Full Audit Trail', desc: 'Every action logged. Every API call recorded. Every permission granted. Complete compliance visibility across all your agents.', color: '#10b981' },
-              { icon: '🌐', title: 'Cross-platform', desc: 'Works with Google Gemini, Microsoft Copilot, OpenAI, AWS Bedrock and any custom agent. One platform to secure them all.', color: '#a78bfa' },
+              { icon: '🌐', title: 'Cross-platform', desc: 'Works with any AI agent platform — cloud hosted, open source or custom built. One platform to secure them all.', color: '#a78bfa' },
             ].map((f, i) => (
               <div key={i} className="glass-card" style={{ borderColor: activeFeature === i ? `${f.color}50` : undefined, background: activeFeature === i ? `rgba(255,255,255,${parseFloat(colors.glassAlpha) + 0.04})` : undefined }}>
                 <div style={{ fontSize: '28px', marginBottom: '24px', width: '60px', height: '60px', background: `${f.color}15`, border: `1px solid ${f.color}30`, borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', backdropFilter: 'blur(10px)' }}>{f.icon}</div>
