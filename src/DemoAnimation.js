@@ -96,7 +96,6 @@ function SceneThreat({ progress }) {
 
 // Scene 2 — Connect Agent
 function SceneConnect({ progress }) {
-  const [typed, setTyped] = useState('');
   const [step, setStep] = useState(0);
   const agentId = 'agt_3dc5953cce2da097';
   const secret = 'sk_live_••••••••••••';
@@ -375,7 +374,7 @@ function ScenePeace({ progress }) {
 export default function DemoAnimation() {
   const [currentScene, setCurrentScene] = useState(0);
   const [sceneKey, setSceneKey] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying] = useState(true);
   const [progress, setProgress] = useState(0);
   const progressRef = useRef(null);
 
