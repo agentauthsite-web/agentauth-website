@@ -490,14 +490,14 @@ export default function App() {
         <div id="how" style={{ padding: '120px 60px', maxWidth: '1100px', margin: '0 auto', borderTop: `1px solid ${colors.sectionBorder}` }}>
           <div style={{ textAlign: 'center', marginBottom: '80px' }}>
             <p className="section-label">How it works</p>
-            <h2 style={{ fontSize: '48px', fontWeight: '900', letterSpacing: '-2px', color: colors.text, marginBottom: '20px' }}>Simple. Secure. Instant.</h2>
-            <p style={{ color: colors.subtext, fontSize: '18px', maxWidth: '480px', margin: '0 auto', lineHeight: '1.7' }}>Three steps to give every AI agent a verified, monitored identity</p>
+            <h2 style={{ fontSize: '48px', fontWeight: '900', letterSpacing: '-2px', color: colors.text, marginBottom: '20px' }}>Connect. Secure. Relax.</h2>
+            <p style={{ color: colors.subtext, fontSize: '18px', maxWidth: '480px', margin: '0 auto', lineHeight: '1.7' }}>Three steps to secure ALL your AI agents across any platform</p>
           </div>
           <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
             {[
-              { step: '01', icon: '🪪', title: 'Register your agent', desc: 'Create an AgentID for each AI agent. Every agent gets unique credentials and a cryptographic identity — no more shared API keys.', color: '#6366f1' },
-              { step: '02', icon: '🧠', title: 'Monitor behaviour', desc: 'AgentAuth builds a behaviour baseline — what APIs your agent calls, what data it accesses. Deviations flagged in real time.', color: '#8b5cf6' },
-              { step: '03', icon: '⚡', title: 'Instant revocation', desc: 'If an agent acts suspiciously, access is revoked instantly — automatically or with one click. Full audit trail for compliance.', color: '#a78bfa' },
+              { step: '01', icon: '🔌', title: 'Connect your agents', desc: 'Bring your existing AI agents from any platform. Enter your agent credentials and AgentAuth instantly shows them all in one unified dashboard.', color: '#6366f1' },
+              { step: '02', icon: '🛡️', title: 'Set MFA & security rules', desc: 'Choose how your agents authenticate — fingerprint, push notification or OTP. Set auto-lock thresholds so AgentAuth protects them 24/7.', color: '#8b5cf6' },
+              { step: '03', icon: '😌', title: 'Relax — we handle the rest', desc: 'AgentAuth monitors all your agents in real time. If anything looks wrong — agent is locked instantly and you get alerted immediately.', color: '#a78bfa' },
             ].map((item, i) => (
               <div key={i} className="step-card glass-card">
                 <div style={{ position: 'absolute', top: '32px', right: '32px', fontSize: '80px', fontWeight: '900', color: 'rgba(99,102,241,0.05)', lineHeight: 1 }}>{item.step}</div>
