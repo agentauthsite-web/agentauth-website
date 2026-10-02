@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import DemoAnimation from './DemoAnimation';
 
 function AgentMonitor({ isDark }) {
@@ -534,31 +534,7 @@ export default function App() {
           </div>
         </div>
 
-        {/* Code */}
-        <div style={{ padding: '120px 60px', borderTop: `1px solid ${colors.sectionBorder}`, maxWidth: '860px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <p className="section-label">Integration</p>
-            <h2 style={{ fontSize: '48px', fontWeight: '900', letterSpacing: '-2px', color: colors.text, marginBottom: '16px' }}>Dead simple to add</h2>
-            <p style={{ color: colors.subtext, fontSize: '18px' }}>5 lines of code. Any AI agent. Any framework.</p>
-          </div>
-          <div style={{ background: 'rgba(5,5,20,0.9)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '24px', padding: '40px', fontFamily: "'Fira Code','Courier New',monospace", fontSize: '14px', lineHeight: 2, position: 'relative', overflow: 'hidden', backdropFilter: 'blur(40px)', boxShadow: '0 32px 64px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08)' }}>
-            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '2px', background: 'linear-gradient(90deg, transparent, #6366f1, #8b5cf6, transparent)', animation: 'shimmer 3s linear infinite', backgroundSize: '200% auto' }} />
-            <div style={{ display: 'flex', gap: '8px', marginBottom: '28px', alignItems: 'center' }}>
-              <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ef4444' }} />
-              <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#f59e0b' }} />
-              <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#10b981' }} />
-              <span style={{ marginLeft: '12px', color: '#444', fontSize: '12px' }}>agentauth_example.py</span>
-            </div>
-            <div><span style={{ color: '#6366f1' }}>from</span> <span style={{ color: '#34d399' }}>agentauth</span> <span style={{ color: '#6366f1' }}>import</span> <span style={{ color: '#fff' }}>AgentAuth</span></div>
-            <br />
-            <div><span style={{ color: '#475569' }}># Give your agent a verified identity</span></div>
-            <div><span style={{ color: '#fff' }}>auth = AgentAuth(agent_id=</span><span style={{ color: '#fbbf24' }}>"support-bot"</span><span style={{ color: '#fff' }}>, secret=</span><span style={{ color: '#fbbf24' }}>"sk_live_xxx"</span><span style={{ color: '#fff' }}>)</span></div>
-            <br />
-            <div><span style={{ color: '#fff' }}>token = auth.</span><span style={{ color: '#34d399' }}>get_token</span><span style={{ color: '#fff' }}>()</span></div>
-            <div><span style={{ color: '#fff' }}>auth.</span><span style={{ color: '#34d399' }}>log_action</span><span style={{ color: '#fff' }}>(action=</span><span style={{ color: '#fbbf24' }}>"api_call"</span><span style={{ color: '#fff' }}>, resource=</span><span style={{ color: '#fbbf24' }}>"db"</span><span style={{ color: '#fff' }}>)</span></div>
-            <div><span style={{ color: '#fff' }}>score = auth.</span><span style={{ color: '#34d399' }}>get_trust_score</span><span style={{ color: '#fff' }}>()</span> <span style={{ color: '#475569' }}># → 94 ✅</span></div>
-          </div>
-        </div>
+
 
         {/* Waitlist */}
         <div id="waitlist" style={{ padding: '140px 20px', textAlign: 'center', borderTop: `1px solid ${colors.sectionBorder}`, position: 'relative', overflow: 'hidden' }}>
