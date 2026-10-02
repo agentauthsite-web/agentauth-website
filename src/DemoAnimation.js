@@ -7,7 +7,7 @@ const scenes = [
     subtitle: "Your AI agent is exposed...",
     color: "#ef4444",
     icon: "⚠️",
-    duration: 3000,
+    duration: 6000,
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const scenes = [
     subtitle: "Enter your agent credentials",
     color: "#6366f1",
     icon: "🔌",
-    duration: 3500,
+    duration: 7000,
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const scenes = [
     subtitle: "Choose your security method",
     color: "#8b5cf6",
     icon: "🛡️",
-    duration: 3500,
+    duration: 7000,
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ const scenes = [
     subtitle: "AgentAuth blocks the intruder",
     color: "#ef4444",
     icon: "🚨",
-    duration: 3000,
+    duration: 6000,
   },
   {
     id: 5,
@@ -39,7 +39,7 @@ const scenes = [
     subtitle: "Your agent works peacefully 24/7",
     color: "#10b981",
     icon: "✅",
-    duration: 3500,
+    duration: 7000,
   },
 ];
 
@@ -101,9 +101,9 @@ function SceneConnect({ progress }) {
   const secret = 'sk_live_••••••••••••';
 
   useEffect(() => {
-    const t1 = setTimeout(() => setStep(1), 500);
-    const t2 = setTimeout(() => setStep(2), 1500);
-    const t3 = setTimeout(() => setStep(3), 2500);
+    const t1 = setTimeout(() => setStep(1), 1000);
+    const t2 = setTimeout(() => setStep(2), 3000);
+    const t3 = setTimeout(() => setStep(3), 5000);
     return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
   }, []);
 
@@ -174,8 +174,8 @@ function SceneMFA({ progress }) {
   const [confirmed, setConfirmed] = useState(false);
 
   useEffect(() => {
-    const t1 = setTimeout(() => setSelected('fingerprint'), 1000);
-    const t2 = setTimeout(() => setConfirmed(true), 2500);
+    const t1 = setTimeout(() => setSelected('fingerprint'), 2000);
+    const t2 = setTimeout(() => setConfirmed(true), 5000);
     return () => { clearTimeout(t1); clearTimeout(t2); };
   }, []);
 
@@ -234,9 +234,9 @@ function SceneAttack({ progress }) {
   const [phase, setPhase] = useState(0);
 
   useEffect(() => {
-    const t1 = setTimeout(() => setPhase(1), 800);
-    const t2 = setTimeout(() => setPhase(2), 1800);
-    const t3 = setTimeout(() => setPhase(3), 2500);
+    const t1 = setTimeout(() => setPhase(1), 1500);
+    const t2 = setTimeout(() => setPhase(2), 3500);
+    const t3 = setTimeout(() => setPhase(3), 5000);
     return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
   }, []);
 
@@ -312,9 +312,9 @@ function ScenePeace({ progress }) {
   const [phase, setPhase] = useState(0);
 
   useEffect(() => {
-    const t1 = setTimeout(() => setPhase(1), 500);
-    const t2 = setTimeout(() => setPhase(2), 1500);
-    const t3 = setTimeout(() => setPhase(3), 2500);
+    const t1 = setTimeout(() => setPhase(1), 1000);
+    const t2 = setTimeout(() => setPhase(2), 3000);
+    const t3 = setTimeout(() => setPhase(3), 5000);
     return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
   }, []);
 
